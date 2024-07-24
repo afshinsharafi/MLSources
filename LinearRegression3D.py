@@ -17,14 +17,10 @@ if __name__ == '__main__':
     ax.set_xlabel('x_age')
     ax.set_ylabel('x_experience')
     ax.set_zlabel('salary')
-
-
     model = LinearRegression()
     model.fit(x, y)
-
     w1,w2 = model.coef_
     w0 = model.intercept_
-
     print(w0,w2)
     predicted_y = model.predict(x)
     print(predicted_y)
